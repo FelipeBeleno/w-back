@@ -1,73 +1,75 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+## W-BACKEND Application
+ 
+This repository contains a backend application developed in NestJS.
+ 
+### Users and Roles
+ 
+Before starting, the following emails are registered in the application, divided in 2 roles: Driver and Reader:
+ 
+- **Driver**:
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ yarn install
+  1. Leone_Ziemann@gmail.com
+  2. Melvina30@gmail.com
+  3. Jackie.Hermiston87@hotmail.com
+  4. Norberto23@hotmail.com
+  4. Eric_Rolfson@yahoo.com
+ 
+- **Reader**:
+  1. Marisa_Reinger@hotmail.com
+  2. Loyal_Waters@gmail.com
+  3. Davon.Kutch@yahoo.com
+ 
+### Project Download
+ 
+You can clone this repository using the following command:
+ 
 ```
-
-## Running the app
-
-```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+git clone https://github.com/FelipeBeleno/w-back.git
 ```
-
-## Test
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+ 
+### Installing Dependencies
+ 
+Once you have downloaded the project, navigate to the root directory and run the following command to install all the necessary dependencies:
+ 
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+cd w-back
+npm install
+```
+ 
+### Configuration
+ 
+Before running the application, be sure to configure any necessary environment variables in an `.env` file. For the sole purpose of this test the .env is attached to the file.
+ 
+### Getting Started
+ 
+Once all dependencies are installed and the configuration is complete, you can start the application by running the following command:
+ 
+```
+npm start
+```
+ 
+The application will be available at `http://localhost:3000`.
+ 
+### Usage
+ 
+The API provides several endpoints to interact with the application. Users are created by default in the database.
+ 
+1. **Creating a Ride**: To create a ride, send a POST request to the `/api/ride/request` endpoint. Users with the driver role will be automatically assigned according to their availability. Once the trip is completed, the drivers will become available again.
+ 
+2. **Check Trip Status**: Once the trip is created, you can check its status by sending a GET request to the `/api/ride/{id}` endpoint, where `{id}` is the trip ID.
+ 
+3. **End a Trip**: To end a trip, use the DELETE request to the `/api/ride/{id}` endpoint, where `{id}` is the trip ID.
+ 
+### Documentation
+ 
+For more details on how to use the API, see the documentation at [http://localhost:3000](#).
+ 
+### Contribution
+ 
+If you would like to contribute to this project, you are welcome! We always appreciate new ideas and suggestions. Please make sure to follow the contribution guidelines.
+ 
+### Problems
+ 
+If you encounter any problems or have any questions, feel free to create an issue in this repository.
+ 
+Thank you for using our application! We hope it will be useful for you.
