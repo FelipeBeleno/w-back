@@ -62,7 +62,7 @@ The API provides several endpoints to interact with the application. Users are c
  
 ### Documentation
  
-For more details on how to use the API, see the documentation at [http://localhost:3000](#).
+For more details on how to use the API, see the documentation at [http://localhost:3000/doc](#).
  
 ### Contribution
  
